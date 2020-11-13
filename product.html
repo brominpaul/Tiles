@@ -26,18 +26,18 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- Nav -->
     <nav
-      class="navbar sticky-top navbar-expand-lg navbar-dark primary-color mb-4"
+      class="navbar sticky-top navbar-expand-lg mb-4"
     >
       <div class="row">
         <div class="col">
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn"
             data-toggle="modal"
             data-target="#cart"
           >
@@ -51,10 +51,32 @@
     </nav>
 
     <!-- Main -->
+    <br><br><br>
     <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section_heading text-center">
+                    <h2>PRODUCTS</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center portfolio-menu">
+       <!-- <button class="btn filter-button" data-filter="all">All</button>-->
+        <button class="btn filter-button" onclick="filterSelection('tiles')">TILES</button>
+        <button class="btn filter-button" onclick="filterSelection('marbles')">MARBLES</button>
+        <button class="btn filter-button" onclick="filterSelection('granites')">GRANITES</button>
+        <button class="btn filter-button" onclick="filterSelection('ceramics')">CERAMICS</button>
+        <button class="btn filter-button" onclick="filterSelection('berger')">BERGER PAINTS</button>
+        <button class="btn filter-button" onclick="filterSelection('jotun')">JOTUN PAINTS</button>
+
+    </div>
+    <br>
+    <div class="container col  pr-3 mb-5 bg-white rounded">
       <div class="row">
-        <div class="col">
-          <div class="card" style="width: 20rem">
+        <div class=" col-3 xl-4 lg-4 md-2 sm-1 xs-1 column tiles">
+          <div class="card mt-5">
             <img
               class="card-img-top"
               src="https://picsum.photos/id/237/320/200"
@@ -67,14 +89,16 @@
                 href="#"
                 data-name="Orange"
                 data-price="0.5"
-                class="add-to-cart btn btn-primary"
+                class="add-to-cart btn"
                 ><i class="fas fa-shopping-cart pr-1"></i>Add to cart</a
               >
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card" style="width: 20rem">
+        <br><br><br>
+
+        <div class="col-3 xl-4 lg-4 md-2 sm-1 xs-1 column marbles">
+          <div class="card mt-5">
             <img
               class="card-img-top"
               src="https://picsum.photos/id/237/320/200"
@@ -87,14 +111,81 @@
                 href="#"
                 data-name="Banana"
                 data-price="1.22"
-                class="add-to-cart btn btn-primary"
+                class="add-to-cart btn"
                 ><i class="fas fa-shopping-cart pr-1"></i>Add to cart</a
               >
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card" style="width: 20rem">
+        <br>
+
+        <div class="col-3 xl-4 lg-4 md-2 sm-1 xs-1">
+            <div class="card mt-5">
+              <img
+                class="card-img-top"
+                src="https://picsum.photos/id/237/320/200"
+                alt="Card image cap"
+              />
+              <div class="card-block px-4">
+                <h4 class="card-title">doggie2</h4>
+                <p class="card-text">Price: ₹2000</p>
+                <a
+                  href="#"
+                  data-name="Banana"
+                  data-price="1.22"
+                  class="add-to-cart btn"
+                  ><i class="fas fa-shopping-cart pr-1"></i>Add to cart</a
+                >
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div class="col-3 xl-4 lg-4 md-2 sm-1 xs-1">
+            <div class="card mt-5">
+              <img
+                class="card-img-top"
+                src="https://picsum.photos/id/237/320/200"
+                alt="Card image cap"
+              />
+              <div class="card-block px-4">
+                <h4 class="card-title">doggie2</h4>
+                <p class="card-text">Price: ₹2000</p>
+                <a
+                  href="#"
+                  data-name="Banana"
+                  data-price="1.22"
+                  class="add-to-cart btn"
+                  ><i class="fas fa-shopping-cart pr-1"></i>Add to cart</a
+                >
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="col-3 xl-4 lg-4 md-2 sm-1 xs-1">
+            <div class="card mt-5">
+              <img
+                class="card-img-top"
+                src="https://picsum.photos/id/237/320/200"
+                alt="Card image cap"
+              />
+              <div class="card-block px-4">
+                <h4 class="card-title">doggie2</h4>
+                <p class="card-text">Price: ₹2000</p>
+                <a
+                  href="#"
+                  data-name="Banana"
+                  data-price="1.22"
+                  class="add-to-cart btn"
+                  ><i class="fas fa-shopping-cart pr-1"></i>Add to cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <br>
+        <div class="col-3 xl-4 lg-4 md-2 sm-1 xs-1 berger">
+          <div class="card mt-5">
             <img
               class="card-img-top"
               src="https://picsum.photos/id/237/320/200"
@@ -107,12 +198,13 @@
                 href="#"
                 data-name="Lemon"
                 data-price="5"
-                class="add-to-cart btn btn-primary"
+                class="add-to-cart btn"
                 ><i class="fas fa-shopping-cart pr-1"></i>Add to cart</a
               >
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
@@ -142,6 +234,11 @@
             <table class="show-cart table"></table>
             <div>Total price: ₹<span class="total-cart"></span></div>
           </div>
+          <div class="customer_details align-items-center">
+            <input type="text" name="customer_name" placeholder="Your name"> <br><br>
+            <input type="number" name="customer_number" placeholder="Your Phone number"><br><br>
+            <input type="text" name="customer_email" placeholder="Your Email">
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -159,8 +256,11 @@
     <!--Start-of-Footer-->
 
     <!-- Footer -->
+
+    <br>
+    <br>
     <footer class="page-footer font-small unique-color-dark">
-      <div style="background-color: #0f56f0">
+      <div style="background-color:#28a745 ">
         <div class="container">
           <!-- Grid row-->
           <div class="row py-4 d-flex align-items-center">
@@ -528,6 +628,40 @@
       });
 
       displayCart();
+    
+
+
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
     </script>
   </body>
 </html>
